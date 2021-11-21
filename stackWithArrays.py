@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import numpy as np
 
 size = int(input("Enter the size of the stack : "))

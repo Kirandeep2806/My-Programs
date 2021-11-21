@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 def mergeSort(arr, low, high):
     if low < high:
         mid = (low + high)//2
