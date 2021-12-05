@@ -10,16 +10,6 @@ class Stack:
         self.stackSize = stackSize
         self.stack = np.array([None]*size)
 
-    def precedence(self, op):
-        if op == "^":
-            return 3
-        elif op == "/" or op == "*" or op == "%":
-            return 2
-        elif op == "+" or op == "-":
-            return 1
-        else:
-            return 0
-
     def isOperator(self, op):
         if op == "^" or op == "/" or op == "*" or op == "%" or op == "+" or op == "-":
             return True
