@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
 import numpy as np
-from numpy.core.fromnumeric import size
 
 class Queue:
     def __init__(self, capacity) -> None:
