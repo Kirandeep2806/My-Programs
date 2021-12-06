@@ -16,4 +16,5 @@ class Queue:
     def isEmpty(self) -> bool:
         pass
 
-
+    def display(self) -> None:
+        pass
