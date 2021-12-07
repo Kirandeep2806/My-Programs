@@ -10,7 +10,7 @@ class Queue:
         self.front = None
         self.rear = None
 
-    def enqueue(self, data):
+    def enqueue(self, data) -> None:
         newNode = Node(data)
         if self.front == self.rear == None:
             self.front = self.rear = newNode
@@ -18,7 +18,7 @@ class Queue:
             self.rear.next = newNode
             self.rear = newNode
 
-    def dequeue(self):
+    def dequeue(self) -> str:
         if self.front == self.rear == None:
             return "No elements to be deleted from the queue!!"
         elif self.front == self.rear:
