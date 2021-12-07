@@ -10,7 +10,7 @@ class Queue:
         self.front = None
         self.rear = None
 
-    def enqueue(self, data) -> None:
+    def enqueue(self, data: object) -> None:
         newNode = Node(data)
         if self.front == self.rear == None:
             self.front = self.rear = newNode
@@ -80,6 +80,12 @@ Enter your choice : """))
     if choice == 1:
         data = int(input("Enter the data into the queue : ") or "100")
         q.enqueue(data)
+
+        '''
+        Get annotations like
+        print(q.enqueue.__annotations__)
+        '''
+        
     elif choice == 2:
         data = q.dequeue()
         print(data)
