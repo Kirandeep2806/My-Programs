@@ -3,7 +3,7 @@
 import numpy as np
 
 height = int(input("Enter the height of the tree : "))
-tree = np.array([0]*(2**(height)-1), dtype=np.object)
+tree = np.array([0]*(2**(height)-1), dtype=object)
 
 currHeight = 0
 while currHeight < height:
@@ -27,8 +27,8 @@ def preorder(root):
 def postorder(root):
     try:
         if tree[root] is not None:
-            preorder(2*root+1)
-            preorder(2*root+2)
+            postorder(2*root+1)
+            postorder(2*root+2)
             print(tree[root], end=" ")
     except:
         return
@@ -36,9 +36,9 @@ def postorder(root):
 def  inorder(root):
     try:
         if tree[root] is not None:
-            preorder(2*root+1)
+            inorder(2*root+1)
             print(tree[root], end=" ")
-            preorder(2*root+2)
+            inorder(2*root+2)
     except:
         return
 
