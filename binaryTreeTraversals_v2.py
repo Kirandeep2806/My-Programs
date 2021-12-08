@@ -12,7 +12,7 @@ end = 2**(currHeight + 1) - 2
 currPtr = 0
 
 
-def updateValues():
+def updateValues() -> None:
     global currHeight, start, end, currPtr
     currHeight += 1
     start = 2**(currHeight) - 1
