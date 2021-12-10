@@ -2,9 +2,8 @@
 
 import numpy as np
 
-
 class Queue:
-    def __init__(self, capacity) -> None:
+    def __init__(self, capacity: int) -> None:
         self.capacity = capacity
         self.front = -1
         self.rear = -1
@@ -20,8 +19,8 @@ class Queue:
             print("Queue is full cannot insert the element!!")
 
         else:
-            self.rear += 1
-            self.queue[self.rear % self.capacity] = data
+            self.rear = (self.rear+1) % self.capacity
+            self.queue[self.rear] = data
 
     def dequeue(self) -> int:
         if self.front == self.rear == -1:
@@ -37,7 +36,7 @@ class Queue:
         else:
             delElement = self.queue[self.front]
             self.queue[self.front] = None
-            self.front += 1
+            self.front = (self.front+1)%self.capacity
             return "Deleted data is : {}".format(delElement)
 
     def size(self) -> int:
@@ -51,6 +50,7 @@ class Queue:
         return False
 
     def display(self) -> None:
+        print(self.front, self.rear)
         ptr = self.front
         if not self.isEmpty():
             print("Data in the queue is : ", end=" ")
