@@ -52,7 +52,7 @@ def postorder(root: int) -> None:
     except:
         return
 
-def  inorder(root: int) -> None:
+def inorder(root: int) -> None:
     try:
         if tree[root] is not None:
             inorder(2*root+1)
