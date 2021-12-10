@@ -38,10 +38,29 @@ class BST:
             self.traverseTree(root.left)
             self.traverseTree(root.right)
 
+    def search(self, data: int, root: Node) -> Node:
+        if root:
+            if data == root.data:
+                return "Element {} is found".format(data)
+            else:
+                if data < root.data:
+                    return self.search(data, root.left)
+                else:
+                    return self.search(data, root.right)
+        return "Element {} is not present in the tree".format(data)
+
 
 treeObj = BST()
-l = list(map(int, input("List the data of binary search tree : ").split()))
-for i in l:
-    treeObj.insert(i)
-treeObj.traverseTree(treeObj.root)
-print()
+while True:
+    choice = int(input("1. Insert\t2. Traverse\t3. Search\t4. Exit\nEnter your choice : "))
+    if choice == 1:
+        data = int(input("Enter the input to be inserted : "))
+        treeObj.insert(data)
+    elif choice == 2:
+        treeObj.traverseTree(treeObj.root)
+        print()
+    elif choice == 3:
+        data = int(input("Enter the data to be searched : "))
+        print(treeObj.search(data, treeObj.root))
+    else:
+        quit(0)
