@@ -32,7 +32,7 @@ class BST:
             else:
                 pos.right = Node(data)
 
-    def traverseTree(self, root: Node):
+    def traverseTree(self, root: Node) -> None:
         if root:
             print(root.data, end=" ")
             self.traverseTree(root.left)
