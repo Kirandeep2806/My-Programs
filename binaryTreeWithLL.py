@@ -1,22 +1,24 @@
+from __future__ import annotations
+
 class Node:
     def __init__(self, data: object) -> None:
         self.left = None
         self.data = data
         self.right = None
 
-    def preorder(self, root) -> None:
+    def preorder(self, root: Node) -> None:
         if root:
             print(root.data, end=" ")
             self.preorder(root.left)
             self.preorder(root.right)
 
-    def postorder(self, root) -> None:
+    def postorder(self, root: Node) -> None:
         if root:
             self.preorder(root.left)
             self.preorder(root.right)
             print(root.data, end=" ")
 
-    def inorder(self, root) -> None:
+    def inorder(self, root: Node) -> None:
         if root:
             self.preorder(root.left)
             print(root.data, end=" ")
