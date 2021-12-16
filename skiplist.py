@@ -59,6 +59,3 @@ l1 = skiplist(max, 0.5)
 for i in range(n):
     l1.Insertion()
 l1.display()
-for i in range(n):
-    l1.Insertion()
-l1.display()
