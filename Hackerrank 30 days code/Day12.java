@@ -21,10 +21,10 @@ class Person {
 
 }
 
-class Student extends Person {
+class Day12 extends Person { // class Day12 extends Person
 	private int[] testScores;
 
-	public Student(String firstName, String lastName, int identification, int[] testScores) {
+	public Day12(String firstName, String lastName, int identification, int[] testScores) { // public Day12
 		super(firstName, lastName, identification);
 		this.testScores = testScores;
 	}
