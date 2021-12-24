@@ -21,7 +21,7 @@ class Difference {
 
 }
 
-public class Day14 {
+public class Day14 {  // public class Slution
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
