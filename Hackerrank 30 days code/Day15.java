@@ -10,7 +10,7 @@ class Node {
     }
 }
 
-class Solution {
+class Day15 { // class Solution
     public static  Node insert(Node head,int data) {
         Node newNode = new Node(data);
         Node currHead, prevNode;
