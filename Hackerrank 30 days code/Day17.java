@@ -1,7 +1,4 @@
 import java.util.*;
-import java.io.*;
-
-//Write your code here
 
 class Calculator {
     public int power(int base, int power)
@@ -12,7 +9,7 @@ class Calculator {
     }
 }
 
-class Day17 {
+class Day17 { // class Solution
 
     public static void main(String[] args) {
 
