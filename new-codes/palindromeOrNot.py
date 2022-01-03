@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
 
+# Write a program to find whether given string of characters given from keyboard is  palindrome or not. Program should store input data in both stack and queue. After entering all the characters compare content of stack and queue using pop and dequeue operations. If contents are same print that given characters are palindrome else not a palindrome.
+
+# Note: program can ignore case of letters, blanks and punctuations.
+
+
+import re
+
+
 class Node:
     def __init__(self, data):
         self.data = data
@@ -54,7 +62,8 @@ class Queue:
 q = Queue()
 s = Stack()
 
-data = input("Enter a word : ")
+data = re.sub(r"[^A-Za-z0-9]", "", input("Enter a word : ").lower())
+print("Input you have entered after cleaning :", data)
 for char in data:
     q.enqueue(char)
     s.push(char)
@@ -71,6 +80,6 @@ while indicator:
     indicator = q_ele or s_ele
 
 if isPalindrome:
-    print("Palindrome!!")
+    print("It is a Palindrome!!")
 else:
-    print("Not a palindrome!!")
+    print("It is not a palindrome!!")
