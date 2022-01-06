@@ -1,13 +1,13 @@
 import numpy as np
 
 l_size = int(input("Enter the size of the list : "))
-elements = list(map(int, input().split(", ")))
+elements = list(map(int, input("Enter the data as space separated inputs : ").split()))
 
 arr = np.array([None]*l_size, dtype=object)
 i = 0
 ptr = 0
 
-while ptr < len(elements):
+while ptr < elements.__len__():
     index = (elements[ptr]+i) % l_size
     if arr[index] is None:
         arr[index] = elements[ptr]
