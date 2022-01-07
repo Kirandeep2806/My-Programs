@@ -19,4 +19,18 @@ while ptr < elements.__len__():
         print("Can't store data from index {} as memory overflows!!".format(ptr))
         break
 
-print("After linear probing the data in arrays is : ", arr)
+print("After linear probing the data in array is : ", arr)
+
+key = int(input("Enter the element to be searched : "))
+i = 0
+
+while i<len(elements):
+    index = (key+i)%l_size
+    if arr[index] == key:
+        print("Found at index {}".format(index))
+        break
+    else:
+        i += 1
+
+else:
+    print("Element not found!!")
