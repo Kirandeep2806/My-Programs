@@ -68,13 +68,7 @@ q = Queue(size)
 
 while True:
     choice = int(input("""Operation you want to perform : 
-1. Enqueue
-2. Dequeue
-3. Count of Elements
-4. isEmpty
-5. Display
-6. Exit
-
+1. Enqueue  2. Dequeue  3. Count of Elements    4. isEmpty  5. Display  6. Exit
 Enter your choice : """))
 
 
