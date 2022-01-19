@@ -2,19 +2,19 @@
 
 from createGraph import createGraph
 
-graph = createGraph()
-
-def DFSGraphTraversal(currNode, visited):
+def DFSGraphTraversal(currNode, visited, graph):
     visited.add(currNode)
     print(currNode, end=" ")
     for node in graph[currNode]:
         if node not in visited:
-            DFSGraphTraversal(node, visited)
+            DFSGraphTraversal(node, visited, graph)
 
-def DFSMain():
+def DFSMain(graph):
     visited = set()
     for node in graph:
         if node not in visited:
-            DFSGraphTraversal(node, visited)
+            DFSGraphTraversal(node, visited, graph)
 
-DFSMain()
+if __name__ == "__main__":
+    graph = createGraph()
+    DFSMain(graph)

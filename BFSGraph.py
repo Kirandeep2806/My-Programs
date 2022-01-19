@@ -2,12 +2,10 @@
 
 from createGraph import createGraph
 
-graph = createGraph()
+# No recursion is required cz we will traverse in a level like manner
 queue = []
 
-# No recursion is required cz we will traverse in a level like manner
-
-def BFSGraphTraversal(currNode):
+def BFSGraphTraversal(currNode, graph):
     visited = set()
     queue.append(currNode)
     print(currNode, end=" ")
@@ -20,4 +18,6 @@ def BFSGraphTraversal(currNode):
                 queue.append(node)
                 print(node, end=" ")
 
-BFSGraphTraversal(__import__("random").randint(1,len(graph)))
+if __name__ == "__main__":
+    graph = createGraph()
+    BFSGraphTraversal(__import__("random").randint(1,len(graph)), graph)
