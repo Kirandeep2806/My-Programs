@@ -14,3 +14,7 @@ def createGraph():
         graph[i] = list(map(int, input("Enter the adjacent nodes of node {} : ".format(i)).split()))
 
     return graph
+
+if __name__ == "__main__":
+    g = createGraph()
+    print(g)
