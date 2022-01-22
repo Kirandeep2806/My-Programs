@@ -1,47 +1,21 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
-class Node:
-    def __init__(self,data):
-        self.data=data
-        self.next=None
-class queue:
-    def __init__(self):
-        self.front=self.rear=None
-    def insert(self):
-        if self.front==self.rear==None:
-            key=int(input("enter the value to be inserted:"))
-            newnode=Node(key)
-            self.front=self.rear=newnode
-        else:
-            key=int(input("enter the value to be inserted "))  
-            newnode=Node(key)
-            newnode.next=self.front
-            self.front=newnode
-            
-    def pop(self):
-        if self.rear==self.front==None or self.front.next==None:
-            print("list is empty:")
-        else:
-            self.front=self.front.next 
-    def display(self):
-        if self.front.next==None:
-            print("list is empty:")
-        else:
-            self.ptr=self.front
-            while(self.ptr==None):
-               
-               print(self.ptr.data)
-               self.ptr=self.ptr.next
-q=queue()
-while(True):
-    print("\tQueue Operations\n1.INSERTION\n2.DELETION\n3.DISPLAY\n4.EXIT\n")
-    n=int(input("enter your choice :"))
-    if n==1:
-        
-        q.insert()
-    if n==2:
-        q.pop()
-    if n==3:
-        q.display()
-    if n==4:
-        exit(0)
+# Put the text u desire in the main.txt file
+
+with open("main.txt") as file:
+    def patternMatching(string, key):
+        found = False
+        for string_start in range(len(string)-len(key)+1):
+            temp = string_start
+            start = 0
+            for i in range(temp, temp+len(key)):
+                if string[i] != key[start]:
+                    break
+                start += 1
+            else:
+                print(f"Pattern found from index {temp}-{temp+len(key)-1}")
+                found = True
+        if not found:
+            print("Element not found")
+key = input("Enter the pattern to be matched : ")
+patternMatching(file.read(), key)
