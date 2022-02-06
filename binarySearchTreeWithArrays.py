@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 a = [1,2,3]
 h = len(a)-1
 res = [None]*(2**(h+1)-1)

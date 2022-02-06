@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 def bubbleSort(arr):
     for i in range(len(arr)):
         swapCount = 0

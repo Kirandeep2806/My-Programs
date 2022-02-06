@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 l = list(map(int, input("Enter list of numbers : ").split()))
 find = int(input("Enter the element to be found : "))
 
