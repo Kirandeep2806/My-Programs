@@ -13,7 +13,7 @@ def generateHash(string, mod=13):
 def patternMatching(string, key, mod=13):
     hash = generateHash(string[0:len(key)], mod)
     keyHash = generateHash(key, mod)
-    print("Keyhash", keyHash, "Hash", hash)
+    # print("Keyhash", keyHash, "Hash", hash)
     if hash == keyHash:
         print(f"Pattern found at index 0")
     else:
