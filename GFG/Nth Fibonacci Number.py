@@ -9,7 +9,7 @@ class Solution:
         if n <= 1:
             mem[n] = n
             return n
-        mem[n] = (self.nthFibonacci(n-1, mem) + self.nthFibonacci(n-2, mem))%1000000007
+        mem[n] = (self.nthFibonacci(n-1, mem)%1000000007 + self.nthFibonacci(n-2, mem)%1000000007)%1000000007
         return mem[n]
 
 #{ 
