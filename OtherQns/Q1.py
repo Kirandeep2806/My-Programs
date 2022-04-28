@@ -2,11 +2,19 @@
 
 # Given a list of numbers in which every number repeats for n-times but expect one number. Find that number
 
+from math import log
+from sys import maxsize
+import sys
+
 a = [2,2,6,1,1,4,5,2,5,1,5,4,4]
 l = [0]*32
 
+getMax = -maxsize-1
+
 for i in a:
     incPos = 0
+    if i > getMax:
+        getMax = i
     while i!=0:
         if i&1:
             l[incPos] += 1
@@ -18,10 +26,12 @@ for i in a:
 # Sum of second bits%3 = (0 + 0 + 0 + 0)%3 = 0; 
 # Sum of third bits%3 = (1 + 1 + 1 + 0)%3 = 0; 
 # Sum of fourth bits%3 = (1)%3 = 1; 
+
 res = 0
 n = 3 # How many times they are repeating
-for index, i in enumerate(l):
-    if i%n:
-        res += 2**index
+
+for i in range(int(log(getMax, 2))+1):
+    if l[i]%n:
+        res += 2**i
 
 print(res)
