@@ -16,6 +16,10 @@ public class ArrayPractice {
         arrayList2.add("I'm John.");
         arrayList2.add("I'm good boy");
 
-        System.out.println(arrayList1);
+        Object[] obj = arrayList1.toArray();
+
+        for(Object i: obj){
+            System.out.println(i);
+        }
     }
 }
