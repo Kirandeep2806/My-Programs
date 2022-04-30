@@ -7,7 +7,7 @@ import java.util.StringTokenizer;
  * start
  */
 
-public class start {
+public class javaStarterTemplate {
     static class FastReader {
         BufferedReader br;
         StringTokenizer st = new StringTokenizer("");
