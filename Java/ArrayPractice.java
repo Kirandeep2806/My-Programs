@@ -23,8 +23,8 @@ public class ArrayPractice {
         }
 
         int[] arr = new int[]{31, 4, 30};
+        Arrays.sort(arr);
         for(int i: arr)
             System.out.println(i);
-        
     }
 }
