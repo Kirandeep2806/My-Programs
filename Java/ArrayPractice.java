@@ -21,5 +21,10 @@ public class ArrayPractice {
         for(Object i: obj){
             System.out.println(i);
         }
+
+        int[] arr = new int[]{31, 4, 30};
+        for(int i: arr)
+            System.out.println(i);
+        
     }
 }
