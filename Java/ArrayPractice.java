@@ -26,5 +26,11 @@ public class ArrayPractice {
         Arrays.sort(arr);
         for(int i: arr)
             System.out.println(i);
+
+        List<int[]> arr2 = new ArrayList<>();
+
+        for(int i: arr)
+            System.out.println(i);
+
     }
 }
