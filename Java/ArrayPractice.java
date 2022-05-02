@@ -29,14 +29,16 @@ public class ArrayPractice {
 
         System.out.println(arr.getClass());
 
-        // Arrays.sort(arr, Collections.reverseOrder());
 
-        Collections.sort(Arrays.asList(arr), Collections.reverseOrder());
+        // Arrays.sort(arr, Collections.reverseOrder()); // Arrays.sort() accepts array & Comparator(optional) as arguments.
+
+        Collections.sort(Arrays.asList(arr), Collections.reverseOrder()); // Collections.sort() accepts List & Comparator(optional) as argumentS.
         
         for (Integer i : arr) {
             System.out.println(i);
         }
 
+        System.out.println(Arrays.asList(arr).getClass());
         System.out.println(arr.getClass());
 
     }
