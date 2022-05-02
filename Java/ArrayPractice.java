@@ -22,19 +22,18 @@ public class ArrayPractice {
             System.out.println(i);
         }
 
-        int[] arr = new int[] { 31, 4, 30 };
+        Integer[] arr = new Integer[] { 31, 4, 30 };
         Arrays.sort(arr);
         for (int i : arr)
             System.out.println(i);
 
-        List<int[]> arr2 = Arrays.asList(arr);
-        // System.out.println(arr2.getClass());
+        System.out.println(arr.getClass());
 
-        Collections.reverse(arr2);
-
-        for (int[] i : arr2)
-            for (int j : i)
-                System.out.println(j);
+        Arrays.sort(arr, Collections.reverseOrder());
+        
+        for (Integer i : arr) {
+            System.out.println(i);
+        }
 
     }
 }
