@@ -29,11 +29,15 @@ public class ArrayPractice {
 
         System.out.println(arr.getClass());
 
-        Arrays.sort(arr, Collections.reverseOrder());
+        // Arrays.sort(arr, Collections.reverseOrder());
+
+        Collections.sort(Arrays.asList(arr), Collections.reverseOrder());
         
         for (Integer i : arr) {
             System.out.println(i);
         }
+
+        System.out.println(arr.getClass());
 
     }
 }
