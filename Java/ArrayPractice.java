@@ -41,5 +41,14 @@ public class ArrayPractice {
         System.out.println(Arrays.asList(arr).getClass());
         System.out.println(arr.getClass());
 
+        List<Integer> list = new ArrayList<>(Arrays.asList(arr));
+        list.add(32);
+
+        Collections.sort(list);
+
+        for (Integer i : list) {
+            System.out.println(i);
+        }
+
     }
 }
