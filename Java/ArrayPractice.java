@@ -32,7 +32,11 @@ public class ArrayPractice {
 
         // Arrays.sort(arr, Collections.reverseOrder()); // Arrays.sort() accepts array & Comparator(optional) as arguments.
 
-        Collections.sort(Arrays.asList(arr), Collections.reverseOrder()); // Collections.sort() accepts List & Comparator(optional) as argumentS.
+        // Collections.sort(Arrays.asList(arr), Collections.reverseOrder()); // Collections.sort() accepts List & Comparator(optional) as argumentS.
+
+        // Sorting using lambdas
+
+        Arrays.sort(arr, (a, b) -> b.compareTo(a)); // b.compareTo(a) as comparator returns descneding order whereas a.compareTo(b) returns ascending order.
         
         for (Integer i : arr) {
             System.out.println(i);
