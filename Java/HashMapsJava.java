@@ -6,6 +6,8 @@ public class HashMapsJava {
         map.put(1, "Kiran");
         map.put(2, "Raj");
         map.put(3, "Rajesh");
+        for (Map.Entry<Integer, String> m : map.entrySet()) {
+            System.out.println(m.getKey() + " " + m.getValue());
+        }
     }
-    
 }
