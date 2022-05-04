@@ -1,0 +1,9 @@
+.vscode
+.code-staging
+__pycache__
+# .gitignore
+binaryTreeWithLLDynamic.py
+Leetcode DSA/*/*.*
+CodeChef/codeTemplate.cpp
+RoughWork
+/*/*.class
