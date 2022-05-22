@@ -3,6 +3,9 @@ import java.util.*;
 public class AssignCookies {
     public static void main(String[] args) {
         String inp;
+        // int[] arr = new int[] {5,4,3,2,1};
+        // Arrays.sort(arr);
+        // System.out.println(Arrays.toString(arr));
         ArrayList<Integer> g = new ArrayList<>();
         ArrayList<Integer> s = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
@@ -24,9 +27,32 @@ public class AssignCookies {
                 j++;
             }
             else
-                break;
+                j++;
         }
         System.out.println(res);
         sc.close();
     }
 }
+
+
+// Submitted Code
+
+// import java.util.*;
+
+// class Solution {
+//     public int findContentChildren(int[] g, int[] s) {
+//         Arrays.sort(g);
+//         Arrays.sort(s);
+//         int i = 0, j = 0 ,res = 0, maxG=g.length, maxS=s.length;
+//         while(i!=maxG && j!=maxS) {
+//             if(s[j] >= g[i]) {
+//                 res++;
+//                 i++;
+//                 j++;
+//             }
+//             else
+//                 j++;
+//         }
+//         return res;
+//     }
+// }
