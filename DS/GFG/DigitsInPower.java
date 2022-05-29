@@ -1,8 +1,6 @@
 // { Driver Code Starts
 //Initial Template for Java
 
-
-
 import java.io.*;
 import java.util.*;
 
@@ -30,10 +28,6 @@ public class DigitsInPower {
 
 
 //User function Template for Java
-
-
-
-
 
 
 class Solve {
