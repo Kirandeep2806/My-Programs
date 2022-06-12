@@ -194,7 +194,6 @@ int main()
             }
             i++;
         }
-
         cout << count << endl;
     }
 }
