@@ -1,12 +1,16 @@
 import java.io.*;
+import java.util.Arrays;
 
 class Solution {
-    public int climbStairs(int n) {
+    public int climbStairs(int n, int[] dp) {
         if(n == 0)
             return 1;
         if(n < 0)
             return 0;
-        return climbStairs(n-1) + climbStairs(n-2);
+        if(dp[n] != -1)
+            return dp[n];
+        dp[n] = climbStairs(n-1, dp) + climbStairs(n-2, dp);
+        return dp[n];
     }
 }
 
@@ -16,6 +20,8 @@ class ClimbingStairs {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
         Solution solution = new Solution();
-        System.out.println(solution.climbStairs(n));
+        int[] dp = new int[n+1];
+        Arrays.fill(dp, -1);
+        System.out.println(solution.climbStairs(n, dp));
     }
 }
