@@ -13,4 +13,7 @@ for i in range(2**n):
         lastSetBit = i&(~(i-1)) # find the last set bit. => 001, 010
         res += s[int(log2(lastSetBit))] # fetch the character@lastSetBit. => res = 'a', res='ab'
         i = i&(i-1) # remove that particular last set bit and proceed until no bits are set. => i=010, i=000
-    print(res)
+    if res == '':
+        print('Φ')
+    else:
+        print(res)
