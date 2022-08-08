@@ -1,7 +1,6 @@
 import java.io.*;
 
 public class RopeCutting {
-
     public static int maxRopes(int n, int a, int b, int c, int ropeCount) {
         if(n == 0)
             return ropeCount;
@@ -12,6 +11,7 @@ public class RopeCutting {
         int maxFromThird = maxRopes(n-c, a, b, c, ropeCount+1);
         return Math.max(Math.max(maxFromFirst, maxFromSecond), maxFromThird);
     }
+
     public static void main(String[] args)
     throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
