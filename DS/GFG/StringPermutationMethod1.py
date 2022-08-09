@@ -6,6 +6,7 @@ def permutations(string, l, r):
     for i in range(l, r):
         string[l], string[i] = string[i], string[l]
         permutations(string, l+1, r)
+        string[l], string[i] = string[i], string[l]
 
 srcString = "ABC"
 string = list(srcString)
