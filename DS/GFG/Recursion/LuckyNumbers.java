@@ -13,6 +13,9 @@ public class LuckyNumbers {
     throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
-        // if(isLucky(n, 2))
+        if(isLucky(n, 2))
+            System.out.println("Lucky Number");
+        else
+            System.out.println("Not a lucky number");
     }
 }
