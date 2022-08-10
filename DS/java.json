@@ -1,0 +1,29 @@
+{
+	"System.out.println": {
+		"prefix": "print",
+		"body": [
+		  "System.out.println($1);"
+		],
+		"description": "System.out.println"
+	  },
+
+	  "Integer.parseInt": {
+		"prefix": "ip",
+		"body": [
+		  "Integer.parseInt($1);"
+		],
+		"description": "Integer.parseInt"
+	  },
+
+	  "Space Separated Input Loop": {
+		"prefix": ["inp", "ssi"],
+		"body": ["String[] inp = br.readLine().split(\" \");\nint[] intInput = new int[inp.length$0];\nfor(int i=0; i<inp.length$0; i++) ", "\tintInput[i] = Integer.parseInt(inp[i]);"],
+		"description": "A for loop."
+	  },
+
+	  "Buffered Reader Input": {
+		"prefix": ["br-inp", "brinp", "br-in"],
+		"body": ["BufferedReader br = new BufferedReader(new InputStreamReader(System.in));\n$0"],
+		"description": "Buffered Reader input."
+	  }
+}
