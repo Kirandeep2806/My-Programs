@@ -1,7 +1,9 @@
 import java.util.*;
+import java.io.*;
 
-public class HashMapsJava {
-    public static void main(String[] args) {
+public class HashMapsJava{
+    public static void main(String[] args)
+    throws IOException {
         HashMap<Integer, String> map = new HashMap<>();
         map.put(1, "Kiran");
         map.put(2, "Raj");
@@ -15,5 +17,15 @@ public class HashMapsJava {
             System.out.println(m.getKey() + " " + m.getValue());
         }
         System.out.println();
+
+        // Compute the frequency of numbers in an array.
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String[] inp = br.readLine().split(" ");
+            int[] intInput = new int[inp.length];
+            for(int i=0; i<inp.length; i++)
+                intInput[i] = Integer.parseInt(inp[i]);
+        HashMap<Integer, Integer> hm = new HashMap<>();
+        for(int i=0; i<intInput.length; i++)
+            hm.compute(intInput[i], (k, v) -> v==null?1:++v);
     }
 }
