@@ -17,7 +17,7 @@
 
 	  "Space Separated Input Loop": {
 		"prefix": ["inp", "ssi"],
-		"body": ["String[] inp = br.readLine().split(\" \");\nint[] intInput = new int[inp.length$0];\nfor(int i=0; i<inp.length$0; i++) ", "\tintInput[i] = Integer.parseInt(inp[i]);"],
+		"body": ["String[] inp = br.readLine().split(\" \");\nint[] intInput$0 = new int[inp.length];\nfor(int i=0; i<intInput$0.length; i++) ", "\tintInput$0[i] = Integer.parseInt(inp[i]);\n"],
 		"description": "A for loop."
 	  },
 
@@ -25,5 +25,11 @@
 		"prefix": ["br-inp", "brinp", "br-in"],
 		"body": ["BufferedReader br = new BufferedReader(new InputStreamReader(System.in));\n$0"],
 		"description": "Buffered Reader input."
+	  },
+
+	  "Starter Template": {
+		"prefix": ["start", "begin"],
+		"body": ["import java.io.*;\nimport java.util.*;\n\npublic class ${TM_FILENAME_BASE} {\n\tpublic static void main(String[] args)\n\tthrows IOException {\n\t\t$1\n\t}\n}\n"],
+		"description": "Starter Template For Java."
 	  }
 }
