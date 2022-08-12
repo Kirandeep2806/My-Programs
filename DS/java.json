@@ -4,7 +4,7 @@
 		"body": [
 		  "System.out.println($1);"
 		],
-		"description": "System.out.println"
+		"description": "Print line."
 	  },
 
 	  "Integer.parseInt": {
@@ -12,13 +12,13 @@
 		"body": [
 		  "Integer.parseInt($1);"
 		],
-		"description": "Integer.parseInt"
+		"description": "Integer typecast class."
 	  },
 
-	  "Space Separated Input Loop": {
+	  "Space Separated Input": {
 		"prefix": ["inp", "ssi"],
 		"body": ["String[] inp = br.readLine().split(\" \");\nint[] intInput$0 = new int[inp.length];\nfor(int i=0; i<intInput$0.length; i++) ", "\tintInput$0[i] = Integer.parseInt(inp[i]);\n"],
-		"description": "A for loop."
+		"description": "Space Separated Input."
 	  },
 
 	  "Buffered Reader Input": {
@@ -28,7 +28,7 @@
 	  },
 
 	  "Starter Template": {
-		"prefix": ["start", "begin"],
+		"prefix": ["start", "begin", "starter-template"],
 		"body": ["import java.io.*;\nimport java.util.*;\n\npublic class ${TM_FILENAME_BASE} {\n\tpublic static void main(String[] args)\n\tthrows IOException {\n\t\t$1\n\t}\n}\n"],
 		"description": "Starter Template For Java."
 	  }
