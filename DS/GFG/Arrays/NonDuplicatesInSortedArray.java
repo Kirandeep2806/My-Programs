@@ -1,5 +1,4 @@
 import java.io.*;
-import java.util.*;
 
 public class NonDuplicatesInSortedArray {
     public static void main(String[] args)
