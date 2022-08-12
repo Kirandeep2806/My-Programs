@@ -4,7 +4,7 @@
 		"body": [
 		  "System.out.println($1);"
 		],
-		"description": "Print line."
+		"description": "System.out.println"
 	  },
 
 	  "Integer.parseInt": {
@@ -12,13 +12,19 @@
 		"body": [
 		  "Integer.parseInt($1);"
 		],
-		"description": "Integer typecast class."
+		"description": "Integer.parseInt"
 	  },
 
-	  "Space Separated Input": {
+	  "Space Separated Input Loop": {
 		"prefix": ["inp", "ssi"],
-		"body": ["String[] inp = br.readLine().split(\" \");\nint[] intInput$0 = new int[inp.length];\nfor(int i=0; i<intInput$0.length; i++) ", "\tintInput$0[i] = Integer.parseInt(inp[i]);\n"],
-		"description": "Space Separated Input."
+		"body": [
+			"String[] inp = br.readLine().split(\" \");",
+			"int[] intInput$0 = new int[inp.length];",
+			"for(int i=0; i<intInput$0.length; i++)",
+			"\tintInput$0[i] = Integer.parseInt(inp[i]);",
+			""
+		],
+		"description": "A for loop."
 	  },
 
 	  "Buffered Reader Input": {
@@ -28,8 +34,19 @@
 	  },
 
 	  "Starter Template": {
-		"prefix": ["start", "begin", "starter-template"],
-		"body": ["import java.io.*;\nimport java.util.*;\n\npublic class ${TM_FILENAME_BASE} {\n\tpublic static void main(String[] args)\n\tthrows IOException {\n\t\t$1\n\t}\n}\n"],
+		"prefix": ["start", "begin"],
+		"body": [
+			"import java.io.*;",
+			"import java.util.*;",
+			"",
+			"public class ${TM_FILENAME_BASE} {", 
+			"\tpublic static void main(String[] args)",
+			"\tthrows IOException {",
+			"\t\t$1",
+			"\t}",
+			"}",
+			""
+		],
 		"description": "Starter Template For Java."
 	  }
 }
