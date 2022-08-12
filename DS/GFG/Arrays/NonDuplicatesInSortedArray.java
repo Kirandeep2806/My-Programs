@@ -6,12 +6,16 @@ public class NonDuplicatesInSortedArray {
     throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String[] inp = br.readLine().split(" ");
-        int[] intInput = new int[inp.length];
-        for(int i=0; i<inp.length; i++) 
-            intInput[i] = Integer.parseInt(inp[i]);
+        int[] arr = new int[inp.length];
+        for(int i=0; i<arr.length; i++) 
+            arr[i] = Integer.parseInt(inp[i]);
         int res = 0;
-        for (int i = 1; i < intInput.length; i++) {
-            
+        System.out.print(arr[res] + " ");
+        for (int i = 1; i < arr.length; i++) {
+            if(arr[res] != arr[i]) {
+                System.out.print(arr[i] + " ");
+                res = i;
+            }
         }
     }
 }
