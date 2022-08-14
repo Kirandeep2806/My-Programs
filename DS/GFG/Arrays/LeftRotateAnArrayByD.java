@@ -1,9 +1,12 @@
 import java.io.*;
-import java.util.*;
 
 public class LeftRotateAnArrayByD {
-    static void reverse(int start, int end) {
-
+    static void reverse(int[] arr, int start, int end) {
+        for(int i=start, j=end; i<j; i++, j--) {
+            int temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
+        }
     }
     public static void main(String[] args)
     throws IOException {
@@ -13,6 +16,6 @@ public class LeftRotateAnArrayByD {
         for(int i=0; i<arr.length; i++)
             arr[i] = Integer.parseInt(inp[i]);
         int d = Integer.parseInt(br.readLine());
-        
+
     }
 }
