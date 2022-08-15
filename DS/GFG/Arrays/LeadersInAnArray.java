@@ -10,10 +10,15 @@ public class LeadersInAnArray {
         int[] arr = new int[n];
         for(int i=0; i<arr.length; i++)
             arr[i] = Integer.parseInt(inp[i]);
-        int currLeader = arr[n-1];
-        for (int i = n-2; i >= 0; i++) {
-            if(arr[i] > currLeader) {
+        ArrayList<Integer> res = new ArrayList<>();
+        int curLeader = arr[n-1];
+        res.add(0, curLeader);
+        for (int i = n-2; i >= 0; i--) {
+            if(arr[i] > curLeader) {
+                curLeader = arr[i];
+                res.add(0, curLeader);
             }
         }
+        System.out.println(res);
     }
 }
