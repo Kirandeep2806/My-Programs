@@ -22,7 +22,21 @@ public class MaximumCircularSubArray {
         int[] arr = new int[inp.length];
         for(int i=0; i<arr.length; i++)
             arr[i] = Integer.parseInt(inp[i]);
-        int res = MaximumSubArray(arr);
-        System.out.println(res);
+        int kadanesMaxSum = MaximumSubArray(arr);
+        System.out.println("Kadane's sum : " + kadanesMaxSum);
+        if(kadanesMaxSum < 0)
+            System.out.println(kadanesMaxSum);
+        else {
+            int arraySum = 0;
+            for (int i = 0; i < arr.length; i++) {
+                arraySum += arr[i];
+                arr[i] = -arr[i];
+            }
+            int circularMaxSum = arraySum + MaximumSubArray(arr);
+            System.out.println("Circular sum : " + circularMaxSum);
+            int finalResult = Math.max(circularMaxSum, kadanesMaxSum);
+
+            System.out.println(finalResult);
+        }
     }
 }
