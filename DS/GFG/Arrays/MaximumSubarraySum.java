@@ -12,10 +12,9 @@ public class MaximumSubarraySum {
         for(int i=0; i<arr.length; i++) {
             arr[i] = Integer.parseInt(inp[i]);
             sumTillNow += arr[i];
+            maxSum = Math.max(sumTillNow, maxSum);
             if(sumTillNow < 0)
                 sumTillNow = 0;
-            else
-                maxSum = Math.max(sumTillNow, maxSum);
         }
         maxSum = Math.max(sumTillNow, maxSum); // To handle the case where all the inputs are -ve
         System.out.println(maxSum);
