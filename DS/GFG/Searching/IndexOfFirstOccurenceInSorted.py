@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-def binarySearch(arr, target, low, high):
+def firstOccurenceIndex(arr, target, low, high):
     while low <= high:
         mid = (low+high)//2
         if arr[mid] == target and mid == 0:
@@ -14,7 +14,8 @@ def binarySearch(arr, target, low, high):
     else:
         return -1
 
-arr = list(map(int, (input() or "1 1 10 10 10 20 20 40".split())))
-target = int(input())
-res = binarySearch(arr, target, 0, len(arr)-1)
-print(res)
+if __name__ == '__main__':
+    arr = list(map(int, (input() or "1 1 10 10 10 20 20 40".split())))
+    target = int(input())
+    res = firstOccurenceIndex(arr, target, 0, len(arr)-1)
+    print(res)
