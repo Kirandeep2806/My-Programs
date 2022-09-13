@@ -12,7 +12,8 @@ def binarySearch(arr, target, low, high):
     else:
         return -1
 
-arr = list(map(int, input().split()))
-target = int(input())
-searchRes = binarySearch(arr, target, 0, len(arr)-1)
-print(searchRes)
+if __name__ == '__main__':
+    arr = list(map(int, input().split()))
+    target = int(input())
+    searchRes = binarySearch(arr, target, 0, len(arr)-1)
+    print(searchRes)
