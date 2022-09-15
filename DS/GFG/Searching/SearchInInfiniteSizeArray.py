@@ -1,4 +1,9 @@
 #!/usr/bin/python3
 
-arr = list(map(int, input().split()))
+from BinarySearchIterative import binarySearch
 
+arr = list(map(int, input().split())) # Input should be a sorted array
+target = int(input())
+n = 1
+while True:
+    pass
