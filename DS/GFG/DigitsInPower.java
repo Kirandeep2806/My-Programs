@@ -14,7 +14,6 @@ public class DigitsInPower {
             inputLine = br.readLine().trim().split(" ");
             int x = Integer.parseInt(inputLine[0]);
             int n = Integer.parseInt(inputLine[1]);
-
             int[] ans = new Solve().getFreq(x, n);
             for (int sec : ans) {
                 System.out.print(sec + " ");
