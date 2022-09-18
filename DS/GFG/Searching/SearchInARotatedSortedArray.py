@@ -14,7 +14,7 @@ while low <= high:
             high = mid-1
         else:
             low = mid+1
-    else:
+    else: # right half is sorted
         if target > arr[mid] and target <= arr[high]:
             low = mid+1
         else:
