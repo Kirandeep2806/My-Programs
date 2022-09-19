@@ -15,7 +15,7 @@ while low <= high:
         else:
             low = mid+1
     else: # right half is sorted
-        if target > arr[mid] and target <= arr[high]:
+        if target > arr[mid] and target <= arr[high]: # Is element lying in the range of (mid+1, high)?
             low = mid+1
         else:
             high = mid-1
