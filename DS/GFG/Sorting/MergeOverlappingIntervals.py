@@ -15,13 +15,11 @@ count = 0
 i = 0
 j = 0
 res = []
-consideredI = False
 temp = []
 temp.append(a[i])
 # print(a[i])
 
 while i<n and j<n:
-    count += 1
     if a[i] <= b[j]:
         logs += 1
         i += 1
