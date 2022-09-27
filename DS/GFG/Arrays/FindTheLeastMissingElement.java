@@ -9,12 +9,16 @@ public class FindTheLeastMissingElement {
         int[] arr = new int[inp.length];
         for(int i=0; i<arr.length; i++)
             arr[i] = Integer.parseInt(inp[i]);
-        int n = arr.length;
+        int n = arr.length, i = 0;
         boolean[] isNotVisited = new boolean[arr.length];
         Arrays.fill(isNotVisited, true);
-        for(int i=0; i<n; i++)
+        for(;i<n;i++)
             if(arr[i] <= n-1)
-                isNotVisited[i] = false;
-        for(int i=0; i<n; i++)
+                isNotVisited[arr[i]] = false;
+        i=0;
+        for(;i<n;i++)
+            if(isNotVisited[i])
+                break;
+        System.out.println(i);
     }
 }
