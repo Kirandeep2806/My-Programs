@@ -9,6 +9,6 @@ for _ in range(int(input())):
             odd += 1
     even = n - odd
     if even == n or odd == n:
-        print(0)
+        print("0")
     else:
         print(even)
