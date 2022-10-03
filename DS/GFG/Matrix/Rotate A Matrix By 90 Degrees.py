@@ -33,8 +33,3 @@ for i in range(n):
     for j in range(i+1, n):
         l[i][j], l[j][i] = l[j][i], l[i][j]
 print(l[::-1])
-
-# Approach - 2
-
-for i in range(n):
-    pass
