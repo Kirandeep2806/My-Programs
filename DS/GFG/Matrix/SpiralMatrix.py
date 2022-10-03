@@ -23,26 +23,25 @@ left = 0
 # 9 10 11 12
 
 while(top<=bottom and left<=right):
-    tempTop = left
-    while(tempTop <= right):
-        print(l[top][tempTop], end=" ")
-        tempTop += 1
+    tempLeft = left
+    while(tempLeft <= right):
+        print(l[top][tempLeft], end=" ")
+        tempLeft += 1
     top += 1
-    tempRight = top
-    while(tempRight <= bottom):
-        print(l[tempRight][right], end=" ")
-        tempRight += 1
+    tempTop = top
+    while(tempTop <= bottom):
+        print(l[tempTop][right], end=" ")
+        tempTop += 1
     right -= 1
-    tempBottom = right
-    while(tempBottom >= left):
-        print(l[bottom][tempBottom], end=" ")
-        tempBottom -= 1
-    bottom -= 1
-    tempLeft = bottom
-    while(tempLeft >= top):
-        print(l[tempLeft][left], end=" ")
-        tempLeft -= 1
-    left += 1
-    print()
-
-
+    if(top <= bottom):
+        tempRight = right
+        while(tempRight >= left):
+            print(l[bottom][tempRight], end=" ")
+            tempRight -= 1
+        bottom -= 1
+    if(left <= right):
+        tempBottom = bottom
+        while(tempBottom >= top):
+            print(l[tempBottom][left], end=" ")
+            tempBottom -= 1
+        left += 1
