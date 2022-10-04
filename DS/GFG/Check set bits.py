@@ -10,9 +10,6 @@ class Solution:
         else:
             return 0
 
-#{ 
-#  Driver Code Starts
-#Initial Template for Python 3
 if __name__ == '__main__': 
     t = int (input ())
     for _ in range (t):
@@ -21,4 +18,3 @@ if __name__ == '__main__':
 
         ob = Solution()
         print(ob.isBitSet(N))
-# } Driver Code Ends
