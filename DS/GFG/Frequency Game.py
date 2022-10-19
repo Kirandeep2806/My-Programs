@@ -16,11 +16,6 @@ def LargButMinFreq(arr,n):
             max_val = key
     return max_val
     
-    
-
-#{ 
-#  Driver Code Starts
-#Initial Template for Python 3
 
 t = int(input())
 #Iterating over test cases
