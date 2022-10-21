@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-#User function Template for python3
+
 class Solution:
 
     def matchPairs(self,nuts, bolts, n):
@@ -13,13 +13,6 @@ class Solution:
                 nuts[start] = i
                 bolts[start] = i
                 start += 1
-
-
-#{ 
-#  Driver Code Starts
-#Initial Template for Python 3
-
-
 
 if __name__ == '__main__':
     tc = int(input())
@@ -36,5 +29,3 @@ if __name__ == '__main__':
             print(x, end=" ")
         print()
         tc -= 1
-
-# } Driver Code Ends
