@@ -25,4 +25,3 @@ if found:
     print("Yes")
 else:
     print("No")
-print(prefixSum)
