@@ -1,1 +1,2 @@
-Longest Subarray with the given sum :  8
+-1 -2 -3 -4 
+0
