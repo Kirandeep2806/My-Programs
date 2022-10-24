@@ -1,1 +1,1 @@
-[4, 7, 3, 4, 6, 10, 13] defaultdict(<function defaultVal at 0x000002980C663E20>, {4: 0, 7: 1, 3: 2, 6: 4, 10: 5, 13: 6})
+Longest Subarray with the given sum :  8

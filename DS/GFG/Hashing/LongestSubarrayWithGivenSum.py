@@ -1,20 +1,22 @@
 #!/usr/bin/python3
 
-from collections import defaultdict
-
-def defaultVal():
-	return -1
+from sys import maxsize
 
 arr = list(map(int, input().split()))
 n = arr.__len__()
 target = int(input())
-d = defaultdict(defaultVal)
+d = {}
+maxVal = -maxsize
 
-prefixSum = [arr[0]]
-d[prefixSum[0]] = 0
-for i in range(1, n):
-	prefixSum.append(arr[i] + prefixSum[i-1])
-	if d[prefixSum[i]]==-1:
-		d[prefixSum[i]] = i
+sumTillNow = 0
+for i in range(n):
+	sumTillNow += arr[i]
+	valueToCheck = sumTillNow - target
+	if valueToCheck==0:
+		maxVal = i+1
+	if d.get(sumTillNow, -1)==-1:
+		d[sumTillNow] = i
+	if d.get(valueToCheck, -1)!=-1:
+		maxVal = max(maxVal, i-d[valueToCheck])
 
-print(prefixSum, d)
+print("Longest Subarray with the given sum : ", maxVal)
