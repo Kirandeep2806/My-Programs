@@ -1,0 +1,9 @@
+4
+4
+abab
+5
+cbcba
+4
+abcd
+6
+pqprqr
