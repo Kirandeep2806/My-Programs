@@ -19,16 +19,21 @@ class Solution:
 	def verticalTraversal(self, root: Optional[TreeNode]) -> List[List[int]]:
 		self.ds.append([0, 0, root])
 		while self.ds:
-			packedData = self.ds.pop(0)
-			level, y, node = packedData
-			if node.left:
-				self.ds.append([level+1, y-1, node.left])
-			if node.right:
-				self.ds.append([level+1, y+1, node.right])
-			self.res[y].append(node.val)
-			self.minVal = min(self.minVal, y)
-			self.maxVal = max(self.maxVal, y)
+			s = self.ds.__len__()
+			self.resTemp = defaultdict(list)
+			for i in range(s):
+				packedData = self.ds.pop(0)
+				level, y, node = packedData
+				if node.left:
+					self.ds.append([level+1, y-1, node.left])
+				if node.right:
+					self.ds.append([level+1, y+1, node.right])
+				self.resTemp[y].append(node.val)
+				self.minVal = min(self.minVal, y)
+				self.maxVal = max(self.maxVal, y)
+			for i in range(self.minVal, self.maxVal+1):
+				self.res[i].extend(sorted(self.resTemp[i]))
 		self.ds.clear()
 		for i in range(self.minVal, self.maxVal+1):
-			self.ds.append(sorted(self.res[i]))
+			self.ds.append(self.res[i])
 		return self.ds
