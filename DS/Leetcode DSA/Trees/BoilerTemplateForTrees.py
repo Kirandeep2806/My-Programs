@@ -10,7 +10,7 @@ class Node:
         self.left = None
 '''
 class Solution:
-	def printBoundaryView(self, root):
+    def printBoundaryView(self, root):
         pass
 
 
