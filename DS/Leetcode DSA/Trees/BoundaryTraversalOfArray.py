@@ -42,7 +42,7 @@ class Solution:
 
 	def printBoundaryView(self, root):
 		if root:
-			self.res.append(root.data)
+		    self.res.append(root.data)
 			self.leftSubTreeBoundary(root.left)
 			if not self.isLeaf(root):
 				self.inorderTraversal(root)
