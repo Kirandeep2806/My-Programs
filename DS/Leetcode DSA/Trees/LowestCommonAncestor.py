@@ -14,22 +14,8 @@ class Solution:
         self.h1 = []
         self.h2 = []
 
-    def findHeight(self, root, target, height):
-        if root:
-            if root.data==target:
-                return height
-            currHeight = self.findHeight(root.left, target, height+1)
-            if currHeight!=None:
-                return currHeight
-            currHeight = self.findHeight(root.right, target, height+1)
-            if currHeight!=None:
-                return currHeight
-
-
     def LCA(self, root, a, b):
-        self.h1 = self.findHeight(root, a, 1)
-        self.h2 = self.findHeight(root, b, 1)
-        print(self.h1, self.h2)
+        pass
 
 
 import sys
