@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 
+# Good explanation : https://leetcode.com/problems/insert-delete-getrandom-o1/discuss/2858286/Python3-Hashmap-%2B-list-(Got-this-in-Google-phone-interview)
+
 from collections import defaultdict
 from random import choice
 
