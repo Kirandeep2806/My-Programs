@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 
 for _ in range(int(input())):
-	n=int(input())
-	l=list(map(int,input().split()))
-	
+	m,n=list(map(int,input().split()))
+	print(m*5+n*7)
