@@ -1,5 +1,11 @@
 #!/usr/bin/python3
 
 for _ in range(int(input())):
-	l=list(map(int,input().split()))
-	
+	n = int(input())
+	if n<3:
+		print("LIGHT")
+	elif n>=3 and n<7:
+		print("MODERATE")
+	else:
+		print("HEAVY")
+
