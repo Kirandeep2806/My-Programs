@@ -1,1 +1,1 @@
--1
+Number of substrings 2
