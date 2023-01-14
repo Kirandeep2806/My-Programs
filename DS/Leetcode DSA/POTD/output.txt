@@ -1,1 +1,2 @@
-Number of substrings 2
+defaultdict(<function Solution.smallestEquivalentString.<locals>.<lambda> at 0x00000208C2B929E0>, {'a': 'a', 'o': 'a', 'e': 'a', 'r': 'c', 'c': 'c', 's': 'c', 'd': 'd', 'm': 'd', 'g': 'g', 't': 'g', 'l': 'l', 'p': 'l'})
+cauccacada
