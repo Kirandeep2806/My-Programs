@@ -3,14 +3,14 @@
 from collections import defaultdict, OrderedDict
 
 class Solution:
-	def DFSMap(self, node, map, adj, visited):
+	def DFSMap(self, node, mp, adj, visited, least="z"):
+		least = min(least, mp[node] or node)
 		if node not in visited:
 			visited.add(node)
 			for i in adj[node]:
-				map[node]=min(map[node] or "z", node, self.DFSMap(i, map, adj, visited))
-			return map[node]
-		else:
-			return map[node] or node
+				least = self.DFSMap(i, mp, adj, visited, least)
+		mp[node] = least
+		return least
 
 	def smallestEquivalentString(self, s1: str, s2: str, baseStr: str) -> str:
 		referenceMap = defaultdict(set)
@@ -22,7 +22,8 @@ class Solution:
 		for j in sorted(referenceMap.items(),key=lambda x:x[0]):
 			d[j[0]]=j[1]
 
-		# print(d)
+		del referenceMap
+
 		m=defaultdict(lambda:None)
 		visited=set()
 		for i in d:
@@ -30,8 +31,7 @@ class Solution:
 				self.DFSMap(i,m,d,visited)
 
 		res=""
-		# print(d)
-		print(m)
+		# print(m)
 		for i in baseStr:
 			res+=(m[i] or i)
 		return res
