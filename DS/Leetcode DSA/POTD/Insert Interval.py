@@ -4,7 +4,6 @@ from typing import List
 
 class Solution:
 	def insert(self, intervals: List[List[int]], newInterval: List[int]) -> List[List[int]]:
-		inserted=False
 		res=0
 		n=len(intervals)
 		for i in range(n):
@@ -13,7 +12,7 @@ class Solution:
 				break
 		else:
 			intervals.append(newInterval)
-			
+
 		for i in range(1,n+1):
 			if intervals[i][0]<=intervals[res][1]:
 				intervals[res][0]=min(intervals[res][0], intervals[i][0])
