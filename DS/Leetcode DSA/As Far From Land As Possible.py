@@ -1,35 +1,26 @@
 from typing import List
+from collections import deque
 
 class Solution:
-    def compute(self,x,y,n,grid,memset,cnt):
-        if grid[x][y]==1 or (abs(x-y)==n):
-            # print(x,y,cnt)
-            return cnt
-        # if grid[x][y]!=float("inf"):
-        #     return grid[x][y]
-        if x>0:
-            t=self.compute(x-1,y,n, grid, memset,cnt+1)
-            print(t)
-            memset[x][y]=min(memset[x][y],t) #top
-        if y<n-1:
-            r=self.compute(x,y+1,n, grid, memset,cnt+1)
-            memset[x][y]=min(memset[x][y],r) #right
-        if x<n-1:
-            b=self.compute(x+1,y,n, grid, memset,cnt+1)
-            memset[x][y]=min(memset[x][y],b) #bottom
-        if y>0:
-            l=self.compute(x,y-1,n, grid, memset,cnt+1)
-            memset[x][y]=min(memset[x][y],l) #left
-        return memset[x][y]
-
-
-    def maxDistance(self, grid) -> int:
+    def maxDistance(self, grid: List[List[int]]) -> int:
         n=len(grid)
-        memset=[[float("inf")]*n for i in range(n)]
+        q=deque()
         for i in range(n):
             for j in range(n):
-                memset[i][j]=self.compute(i,j,n,grid,memset,0)
-        print(memset)
+                if grid[i][j]==1:
+                    q.append([i,j])
+
+        res=-float("inf")
+        coordinates=[[1,0],[-1,0],[0,1],[0,-1]]
+        while q:
+            x,y=q.popleft()
+            for i,j in coordinates:
+                x_temp,y_temp=x+i,y+j
+                if 0<=x_temp<n and 0<=y_temp<n and grid[x_temp][y_temp]==0:
+                    grid[x_temp][y_temp]=grid[x][y]+1
+                    res=max(res, grid[x_temp][y_temp])
+                    q.append([x_temp,y_temp])
+        return res-1
 
 s=Solution().maxDistance(eval(input()))
 print(s)
