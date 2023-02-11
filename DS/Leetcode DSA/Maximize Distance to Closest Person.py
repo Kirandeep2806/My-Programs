@@ -18,8 +18,8 @@ class Solution:
                     start=m
                 consecutives=1
             if consecutives>=m:
-                    index=i
-                    m=consecutives
+                index=i
+                m=consecutives
         return max(consecutives, start, ceil(m/2))
 
 s=Solution().maxDistToClosest(eval(input()))
