@@ -17,6 +17,5 @@ class Solution:
 		self.soln(0,nums,ds,res)
 		return res
 
-
 s=Solution().subsets(eval(input()))
 print(s)

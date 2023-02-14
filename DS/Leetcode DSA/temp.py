@@ -1,12 +1,18 @@
-from sys import stdin
-from collections import defaultdict
-def compute(n,memset):
-    if n<12:
-        return n
-    if n in memset:
-        return memset[n]
-    memset[n]=max(n,compute(n//2,memset)+compute(n//3,memset)+compute(n//4,memset))
-    return memset[n]
+from collections import Counter
+for _ in range(int(input())):
+    res=0
+    an,bn=map(int, input().split())
+    a=list(map(int,input().split()))
+    b=list(map(int,input().split()))
+    c=Counter(a)
+    consecutives=1
+    for i in range(1,bn):
+        if b[i]==b[i-1]:
+            consecutives+=1
+        else:
+            res+=(consecutives*c.get(b[i-1],0))
+            consecutives=1
+    if c.get(b[i],0):
+        res+=(consecutives*c.get(b[i],0))
 
-for n in stdin:
-  print(compute(int(n),defaultdict(lambda:-1)))
+    print(res)
