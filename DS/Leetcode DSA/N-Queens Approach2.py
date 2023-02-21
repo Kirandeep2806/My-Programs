@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def isSafe(self,n,row,col,arr,d):
         for i in d:
@@ -25,3 +27,6 @@ class Solution:
         res=[]
         self.NQueen(n, 0, arr, res)
         return res
+
+s=Solution().solveNQueens(int(input()))
+print(s)
