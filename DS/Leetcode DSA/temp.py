@@ -5,9 +5,11 @@ for _ in range(int(input())):
     left, right, runSum, count = 0, 0, 0, 0
     while right < n:
         runSum += arr[right]
-        while runSum > target:
+        while runSum >= target:
             runSum -= arr[left]
             left += 1
         count += right - left + 1
         right += 1
-    print(count)
+    allPossibilities = n*(n+1)//2
+    print(allPossibilities-count)
+
