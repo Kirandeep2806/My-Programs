@@ -14,8 +14,7 @@ def solve(ind, target, arr, dp):
     dp[ind][target] = pick or notPick
     return dp[ind][target]
 
-arr = [2,3,1,1]
+arr = [2,3,1,4,4,4]
 target = 7
 dp = [[-1 for _ in range(target+1)] for __ in range(len(arr))]
 print(solve(len(arr)-1, target, arr, dp))
-
