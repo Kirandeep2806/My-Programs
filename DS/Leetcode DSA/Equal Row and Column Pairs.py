@@ -1,5 +1,6 @@
 from copy import deepcopy
 from collections import defaultdict
+
 class Solution:
     def equalPairs(self, grid: List[List[int]]) -> int:
         n = len(grid)
