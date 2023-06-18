@@ -1,6 +1,6 @@
 from typing import List
 
-grid = [[1,1,0,1,1],[1,0,0,0,0],[0,0,0,1,1],[1,1,0,1,0]]
+grid = [[1,0,1,0],[0,1,0,1],[0,0,0,1]]
 m = len(grid)
 n = len(grid[0])
 vis = [[0 for _ in range(n)] for __ in range(m)]
@@ -22,4 +22,4 @@ for i in range(m):
             dfs(i,j,(i,j),l)
             hm.add(tuple(l))
 
-print(len(hm))
+print(hm)
