@@ -17,7 +17,7 @@ class Solution:
             numsLeft = hm[node.val] - inStart
             numsRight = inEnd - hm[node.val]
             node.left = solve(inStart, hm[node.val]-1, postStart-numsRight-1, postEnd)
-            node.right = solve(hm[node.val]+1, inEnd, postStart-1, postStart-numsRight) # postEnd+numsLeft
+            node.right = solve(hm[node.val]+1, inEnd, postStart-1, postStart-numsRight) # 4th param : postEnd+numsLeft
             return node
         root = solve(0, n-1, n-1, 0)
         return root
