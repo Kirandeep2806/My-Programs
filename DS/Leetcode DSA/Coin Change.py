@@ -1,7 +1,8 @@
+from collections import functools
 from sys import maxsize
 class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
-        @cache
+        @lru_cache(None)
         def solve(i,tar):
             if i == 0:
                 if tar%coins[0]==0:
