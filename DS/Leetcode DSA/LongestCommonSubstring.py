@@ -15,4 +15,4 @@ for i in range(1,n+1):
 			res = max(res, dp[i][j])
 		else:
 			dp[i][j] = 0
-print(res)
+print(res[::-1])
