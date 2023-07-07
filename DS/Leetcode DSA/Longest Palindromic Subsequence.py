@@ -39,7 +39,7 @@ print(res)
 # 	for j in range(i+1,n):
 # 		if i==j:
 # 			dp[i][j] = 1
-# 		elif s[i]==s[j]:
+# 		elif s[i]==s[j]:ab
 # 			dp[i][j] = 2 + dp[i+1][j-1]
 # 		else:
 # 			dp[i][j] = max(dp[i+1][j], dp[i][j-1])

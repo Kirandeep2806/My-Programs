@@ -15,8 +15,6 @@ for i in range(1,m+1):
 		else:
 			dp[i][j] = max(dp[i-1][j], dp[i][j-1])
 
-print(dp)
-
 i = m
 j = n
 res = ""
@@ -29,4 +27,4 @@ while i>0 and j>0:
 		i -= 1
 	else:
 		j -= 1
-print(res)
+print(res[::-1])
