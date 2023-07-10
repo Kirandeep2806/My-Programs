@@ -29,4 +29,30 @@ class Solution:
             if check[i] == 1:
                 safe.append(i)
         return safe
-                
+
+# Using Topological Sorting through Kahn's Algorithm
+
+# class Solution:
+#     def eventualSafeNodes(self, graph: List[List[int]]) -> List[int]:
+#         V = len(graph)
+#         revGraph = [[] for _ in range(V)]
+#         for ind, adj in enumerate(graph):
+#             for node in adj:
+#                 revGraph[node].append(ind)
+#         indegree = [0]*V
+#         for i in range(V):
+#             for node in revGraph[i]:
+#                 indegree[node] += 1
+#         q = deque()
+#         for i in range(V):
+#             if indegree[i] == 0:
+#                 q.append(i)
+#         topo = []
+#         while q:
+#             node = q.popleft()
+#             topo.append(node)
+#             for i in revGraph[node]:
+#                 indegree[i] -= 1
+#                 if indegree[i] == 0:
+#                     q.append(i)
+#         return sorted(topo)
