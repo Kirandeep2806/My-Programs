@@ -12,11 +12,9 @@ class Solution:
         vis = [0]*V
         dist = [1e9]*V
         dist[src] = 0
-        # print(adj)
         q = deque([src])
         while q:
             node = q.popleft()
-            # print(node)
             for i in adj[node]:
                 if (dist[node] + 1 < dist[i]):
                     dist[i] = dist[node] + 1
