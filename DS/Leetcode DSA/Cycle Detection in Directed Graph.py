@@ -1,6 +1,6 @@
 from collections import deque
 
-# Using Kahn's Algo
+# Using Kahn's Algorithm
 
 class Solution:
     #Function to detect cycle in a directed graph.
