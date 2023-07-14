@@ -9,7 +9,6 @@ class Solution:
             adj[u].append(v)
             adj[v].append(u)
         q = deque()
-        vis = [0]*V
         dist = [1e9]*V
         dist[src] = 0
         q = deque([src])
