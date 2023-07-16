@@ -15,5 +15,5 @@ class Solution:
                 nextNode, curToNext = i
                 if dist[node] + curToNext < dist[nextNode]:
                     dist[nextNode] = dist[node] + curToNext
-                    pq.append((dist[nextNode], nextNode))
+                    heapq.heappush(pq, (dist[nextNode], nextNode))
         return dist
